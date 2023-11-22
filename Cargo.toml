@@ -1,0 +1,19 @@
+[package]
+name = "aoc-2023"
+version = "0.1.0"
+authors = ["jlg <jlg@jleguen.info>"]
+edition = "2021"
+
+[dependencies]
+aoc-runner = "*"
+aoc-runner-derive = "*"
+parse-display = "0.6"
+itertools = "*"
+ascii = "1.1.0"
+#ego-tree = "0.6.2"
+#toodee = "0.3.0"
+#num-bigint = "0.4.3"
+#pathfinding = "4.0.0"
+#serde_json = "1.0.89"
+#serde = { version = "1.0", features = ["derive"] }
+#petgraph = "0.6.2"
