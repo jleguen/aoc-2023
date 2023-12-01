@@ -18,3 +18,4 @@ cargo aoc
 ## Resolution
 
 ### [Day 1](https://adventofcode.com/2023/day/1)
+Replace all textual occurences by the digits, but be careful to keep first and last letter to ensure overlapping digits are found.
