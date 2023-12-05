@@ -28,3 +28,8 @@ TODO
 
 ### [Day 4](https://adventofcode.com/2023/day/4)
 Don't try to be smart and simply split and brute-parse the input. Use custom types `Numbers` and `Card` to simplify inner loops, as always.
+
+### [Day 5](https://adventofcode.com/2023/day/5)
+Use a sparse Range representation to avoid storing too many numbers.
+
+For part 2, some memoisation could help accelerate the computations.
