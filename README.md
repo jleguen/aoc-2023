@@ -24,7 +24,7 @@ Replace all textual occurences by the digits, but be careful to keep first and l
 Don't try to be smart and simply split and brute-parse the input. Use custom types `Draw` and `Game` to clean up the inner loops.
 
 ### [Day 3](https://adventofcode.com/2023/day/3)
-TODO
+Use `toodee` and some very ugly matrix traversal.
 
 ### [Day 4](https://adventofcode.com/2023/day/4)
 Don't try to be smart and simply split and brute-parse the input. Use custom types `Numbers` and `Card` to simplify inner loops, as always.
