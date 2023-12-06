@@ -33,3 +33,7 @@ Don't try to be smart and simply split and brute-parse the input. Use custom typ
 Use a sparse Range representation to avoid storing too many numbers.
 
 For part 2, some memoisation could help accelerate the computations.
+
+### [Day 6](https://adventofcode.com/2023/day/6)
+We know the second part usually uses much bigger numbers than the first one.
+Directly use algebra instead of brute force :)
