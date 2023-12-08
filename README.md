@@ -37,3 +37,10 @@ For part 2, some memoisation could help accelerate the computations.
 ### [Day 6](https://adventofcode.com/2023/day/6)
 We know the second part usually uses much bigger numbers than the first one.
 Directly use algebra instead of brute force :)
+### [Day 7](https://adventofcode.com/2023/day/7)
+
+
+### [Day 8](https://adventofcode.com/2023/day/8)
+* Part1 : Brute force, simply follow the network
+* Part2 : Might need cycle detection or smarter things...
+
