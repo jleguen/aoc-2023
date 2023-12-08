@@ -38,7 +38,7 @@ For part 2, some memoisation could help accelerate the computations.
 We know the second part usually uses much bigger numbers than the first one.
 Directly use algebra instead of brute force :)
 ### [Day 7](https://adventofcode.com/2023/day/7)
-
+Quick and dirty, but broke part1 to be able to pass part2.
 
 ### [Day 8](https://adventofcode.com/2023/day/8)
 * Part1 : Brute force, simply follow the network
