@@ -14,6 +14,7 @@ ascii = "1.1.0"
 #ego-tree = "0.6.2"
 toodee = "0.5.0"
 #num-bigint = "0.4.3"
+num = "0.4.1"
 #pathfinding = "4.0.0"
 #serde_json = "1.0.89"
 #serde = { version = "1.0", features = ["derive"] }

@@ -43,4 +43,5 @@ Quick and dirty, but broke part1 to be able to pass part2.
 ### [Day 8](https://adventofcode.com/2023/day/8)
 * Part1 : Brute force, simply follow the network
 * Part2 : Might need cycle detection or smarter things...
+    Find least common multiple of all cycles:    20685524831999
 

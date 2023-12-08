@@ -1,4 +1,5 @@
 use itertools::Itertools;
+use num::integer::lcm;
 use parse_display::{Display, FromStr};
 use std::collections::HashMap;
 // ---------------------------------------------------------------------------
@@ -55,28 +56,46 @@ impl Map {
         }
     }
 
-    pub fn count(&self, start: &State) -> u32 {
-        let mut res: u32 = 0;
+    pub fn count(&self, start: &State, part2: bool) -> (u64, State) {
+        let mut res: u64 = 0;
         let mut next = start.clone();
         for inst in self.instructions.iter().cycle() {
             res += 1;
             next = Map::next(&next, &inst, &self.network);
-            if next == Map::END.to_string() {
-                return res;
+            if !part2 && next == Map::END.to_string() || part2 && next.ends_with('Z') {
+                return (res, next);
             }
         }
-        0
+        panic!("Unable to find end state");
     }
 
-    pub fn part2(&self) -> u32 {
-        let mut res: u32 = 0;
-        let mut start: Vec<State> = self
+    /// Return loop size and length from start state
+    pub fn find_loop_size(&self, state: &State) -> (u64, u64) {
+        let (_start, end) = self.count(state, true);
+        let (len, end) = self.count(&end, true);
+        (_start, len)
+    }
+
+    pub fn part2(&self) -> u64 {
+        let next: Vec<State> = self
             .network
             .keys()
             .filter(|k| k.ends_with('A'))
             .map(|k| k.clone())
             .collect();
-        0
+
+        println!("Start {:?}", next);
+
+        let loops: Vec<u64> = next.iter().map(|x| self.find_loop_size(x).0).collect();
+        println!("{:?}", loops);
+
+        // Find least common multiple of all numbers.
+        let mut res = 1;
+        for num in loops {
+            res = lcm(res, num);
+            println!("Num {} -> LCM {}", num, res);
+        }
+        res
     }
 }
 
@@ -93,13 +112,13 @@ pub fn input_generator(input: &str) -> Map {
 // ENTRY POINTS for cargo-aoc
 // ---------------------------------------------------------------------------
 #[aoc(day8, part1)]
-pub fn part1(input: &Map) -> u32 {
+pub fn part1(input: &Map) -> u64 {
     println!("{:?}", input);
-    input.count(&Map::START.to_string())
+    input.count(&Map::START.to_string(), false).0
 }
 
 #[aoc(day8, part2)]
-pub fn part2(input: &Map) -> u32 {
+pub fn part2(input: &Map) -> u64 {
     input.part2()
 }
 
