@@ -45,3 +45,6 @@ Quick and dirty, but broke part1 to be able to pass part2.
 * Part2 : Might need cycle detection or smarter things...
     Find least common multiple of all cycles:    20685524831999
 
+### [Day 9](https://adventofcode.com/2023/day/9)
+Simple recursion
+
