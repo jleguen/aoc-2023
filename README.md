@@ -48,3 +48,9 @@ Quick and dirty, but broke part1 to be able to pass part2.
 ### [Day 9](https://adventofcode.com/2023/day/9)
 Simple recursion
 
+### [Day 10](https://adventofcode.com/2023/day/10)
+### [Day 11](https://adventofcode.com/2023/day/11)
+### [Day 12](https://adventofcode.com/2023/day/12)
+### [Day 13](https://adventofcode.com/2023/day/13)
+* Part1: Encode each pattern as vectors of integers for lines and columns, to "easily" compute the reflexion
+* Part2: Looks like we have to use a greedy algorithm and change all mirrors :(
